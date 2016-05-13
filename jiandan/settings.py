@@ -23,7 +23,7 @@ DOWNLOAD_DELAY = 0.25
 
 PAGE_SUM = 10
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jiandan (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -42,11 +42,12 @@ PAGE_SUM = 10
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED=False
 
-# Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-#}
+#Override the default request headers:
+DEFAULT_REQUEST_HEADERS = {
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'Accept-Language': 'en',
+  'Referer':'http://jandan.net/ooxx'
+}
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html

@@ -24,9 +24,15 @@ class JiandanPipeline(object):
             # print 'file_path',file_path
             if os.path.exists(file_name):
                 continue
-            with open(file_path,'wb') as file_writer:
-                conn = urllib.urlopen(image_url)#下载图片
-                file_writer.write(conn.read())
-            file_writer.close()
+            try:
+                with open(file_path,'wb') as file_writer:
+                    conn = urllib.urlopen(image_url)#下载图片
+                    file_writer.write(conn.read())
+                file_writer.close()
+            except Exception, e:
+                file_writer.close()
+                continue
+      
+
         return item
 

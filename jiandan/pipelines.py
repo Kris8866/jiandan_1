@@ -12,6 +12,7 @@ from jiandan import settings
 class JiandanPipeline(object):
 
     def process_item(self, item, spider):
+
         print 'spider_name----------->>>>',spider.name
         dir_path = '%s/%s'%(settings.IMAGES_STORE,spider.name)#存储路径
         print 'dir_path',dir_path
